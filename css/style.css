@@ -35,24 +35,75 @@
     text-decoration: none;
 }
 
-section.container{
-    display: flex;
-    justify-content: center;
+section.carrosel-container{
+    margin: 0 auto;
+    position: relative;
+    max-width: 800px;
     margin-top: 100px;
-    min-height: 500px;
 }
 
-section.container .carrosel{
+.carrosel-wrapper{
+    overflow-x: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.carrosel{
     display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: gray;
-    border-radius: 20px;
-    width: 50%;
+    flex-flow: row nowrap;
 }
 
-.carrosel h1{
-    color: white;
+.arrow-left{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: auto;
+    bottom: 0;
+    font-size: 40px;
+    width: 40px;
+    line-height: 250px;
+    cursor: pointer;
+    color: #fff;
+    background: linear-gradient(to left, transparent 0%, black 200%);
+    border: none;
+    opacity: 0.5;
+    transition: all 600ms ease-in-out;
+}
+
+
+.arrow-right{
+    position: absolute;
+    top: 0;
+    left: auto;
+    right: 0;
+    bottom: 0;
+    font-size: 40px;
+    width: 40px;
+    line-height: 250px;
+    cursor: pointer;
+    color: #fff;
+    background: linear-gradient(to right, transparent 0%, black 200%);
+    border: none;
+    opacity: 0.5;
+    transition: all 600ms ease-in-out;
+}
+
+
+
+
+
+.item{
+    width: 800px;
+    height: 500px;
+    flex-shrink: 0;
+    opacity: 0.5;
+    transition: all 600ms ease-in-out;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.current-item{
+    opacity: 1;
 }
 
 #mobile-menu{
@@ -88,7 +139,7 @@ section.container .carrosel{
 
 
 @media (max-width: 720px){
-    section.container{
+    section.carrosel-container{
         display: none;
     }
 
@@ -119,7 +170,7 @@ section.container .carrosel{
         display: flex;
         align-items:center;
         justify-content: center;
-        background-color: #128FAA;
+        background-color: #097a94;
         color: white;
         font-size: 28px;
         border: none;

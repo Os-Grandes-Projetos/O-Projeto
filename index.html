@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EUCONFIO</title>
     <script src="js/app.js" defer></script>
+    <script src="js/carrosel.js" defer></script>
     <link rel="stylesheet" href="css/style.css" type="text/css"/>
 </head>
 <body>
@@ -32,9 +33,15 @@
         </div>
     </nav>
 
-    <section class="container">
-        <div class="carrosel">
-            <h1>EFEITO CARROSEL</h1>
+    <section class="carrosel-container">
+        <div class="carrosel-wrapper">
+            <div class="carrosel">
+                <button class="arrow-left control"> < </button>
+                <button class="arrow-right control"> > </button>
+                <img src="https://source.unsplash.com/random/800x500/?beach" alt="Praia" class="item current-item"/>
+                <img src="https://source.unsplash.com/random/800x500/?animal" alt="Animal" class="item"/>
+                <img src="https://source.unsplash.com/random/800x500/?night" alt="Noite" class="item"/>
+            </div>
         </div>
     </section>
 </body>
